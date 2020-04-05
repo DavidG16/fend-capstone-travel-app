@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-dev": "webpack-dev-server --open",
-    "build-prod": "weboack",
-    "start-dev": "nondemon start",
-    "start-prod": "node start"
+    "test": "jest",
+    "build-dev": "webpack-dev-server --config webpack.dev.js --open",
+    "build-prod": "webpack --config webpack.prod.js",
+    "start-dev": "nondemon src/server/server.js",
+    "start-prod": "node src/server/server.js"
   },
   "author": "",
   "license": "ISC",

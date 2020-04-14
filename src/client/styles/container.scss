@@ -1,0 +1,11 @@
+@import "variables.scss";
+
+
+.container {
+    position: relative;
+    max-width: 1140px;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,20 @@
+@import "variables.scss";
+
+
+.main{
+    padding: 0.3em 0 0.3em 0;
+    height: 70px;
+    color: black;
+    background-color: brown;
+
+
+
+}
+
+.nav-logo{
+    margin-left: 10em;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: $nav-text;
+}

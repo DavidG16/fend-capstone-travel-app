@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const workboxPlugin = require('workbox-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 
 
@@ -47,6 +48,10 @@ module.exports = {
          new workboxPlugin.GenerateSW({
              clientsClaim: true,
              skipWaiting: true
+         }),
+         new Dotenv({
+            path: path.resolve(__dirname, './.env'),
+            safe: true
          })
     ]
 }

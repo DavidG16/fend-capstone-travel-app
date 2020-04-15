@@ -1,6 +1,4 @@
-import getCityData from "./getData"
-import axios from 'axios';
-
+import {getTavel} from "./getTravelData";
 
 function addHandleSubmit (e) {
     e.preventDefault()
@@ -11,23 +9,11 @@ function addHandleSubmit (e) {
     //     alert('Please make sure you have add a Where and When')
     // }
     console.log(`To ${where} departing ${when}`)
-   // http://api.geonames.org/searchJSON?q=miami&username=davidg16
-
-   getCityData("davidg16", where)
-
-
-
+    getTavel(where)
 
 }
 
-
-
-
-
-
-
-
-export default {
+export  {
     addHandleSubmit
 }
 

@@ -5,12 +5,12 @@ import axios from 'axios';
     completeURL = `${url}${city}&username=${username}`
     console.log(completeURL)
 
-    return await axios.get(completeURL).then(response => {
-        if (response.geonames[0] != 0) {
-          return response.geonames[0];
-        } else {
-          return { error: 'no results' };
-        }
+    return await axios.get(completeURL).then((response) => {
+        console.log(response.data);
+        console.log(response.status);
+        console.log(response.statusText);
+        console.log(response.headers);
+        console.log(response.config);
       });
 
 

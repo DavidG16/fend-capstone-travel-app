@@ -1,14 +1,17 @@
 import { getCityData } from "./getCityData"
+import { getWeatherData } from "./getWeatherData"
 
    async function getTavel (where) {
     const username = process.env.USERNAME;
-    await getCityData(username, where).then((data) =>{
-        console.log(data)
-    
-    }).then(
+    const weatherbitKey = process.env.weatherbit_key;
+    await getCityData(username, where).then((data) =>{ 
 
-        console.log("Finish Travel")
-    )
+        getWeatherData(data.lng, data.lat, weatherbitKey).then((weatherData) => {
+            console.log(weatherData)
+
+        })
+
+    })
     
 
    }

@@ -3,8 +3,10 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const workboxPlugin = require('workbox-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assests-webpack-plugin')
-const TerserPlugin = require('tesrser-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
+
+
 
 module.exports = {
     entry: './src/client/index.js',

@@ -1,4 +1,5 @@
 import getCityData from "./getData"
+import axios from 'axios';
 
 
 function addHandleSubmit (e) {
@@ -13,11 +14,17 @@ function addHandleSubmit (e) {
    // http://api.geonames.org/searchJSON?q=miami&username=davidg16
 
     const city = getCityData("davidg16", where)
-    console.log(city)
+
+
 
 
 }
-    
+
+
+
+
+
+
 
 
 export default {

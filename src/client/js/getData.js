@@ -1,18 +1,19 @@
 import axios from 'axios';
 
  async function getCityData(username, city) {
-     const url=  "http://api.geonames.org/searchJSON?q=",
+    const url=  "http://api.geonames.org/searchJSON?q=",
     completeURL = `${url}${city}&username=${username}`
-    try {
-        result = await axios.get(completeURL)
-        return result
-    }
+    console.log(completeURL)
 
-    catch (err)
-    {
-        console.log("Error getting the city coordinates")
-    }
- 
+    return await axios.get(completeURL).then(response => {
+        if (response.geonames[0] != 0) {
+          return response.geonames[0];
+        } else {
+          return { error: 'no results' };
+        }
+      });
+
+
 
 }
 

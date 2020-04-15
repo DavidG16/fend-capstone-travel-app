@@ -13,7 +13,7 @@ function addHandleSubmit (e) {
     console.log(`To ${where} departing ${when}`)
    // http://api.geonames.org/searchJSON?q=miami&username=davidg16
 
-    const city = getCityData("davidg16", where)
+   getCityData("davidg16", where)
 
 
 

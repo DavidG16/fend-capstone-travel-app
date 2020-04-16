@@ -8,9 +8,9 @@ function addHandleSubmit (e) {
     const where = document.getElementById("where").value
 
 
-    // if (where=='' || when=='') {
-    //     alert('Please make sure you have add a Where and When')
-    // }
+    if (where=='' || when=='') {
+        alert('Please make sure you have add a Where and When')
+    }
     
     getTavel(where)
     // const dates = handleDates()

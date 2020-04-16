@@ -11,7 +11,10 @@ import axios from 'axios';
         await axios.get(completeURL).then((response) => {
             data.lng = response.data.geonames[0].lng
             data.lat = response.data.geonames[0].lat
+            data.country = response.data.geonames[0].countryName
+            console.log(response.data.geonames[0])
           });
+          console.log(data)
           return data;
     }
     catch(error) {

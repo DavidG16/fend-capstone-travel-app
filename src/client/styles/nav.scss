@@ -6,15 +6,31 @@
     height: 70px;
     color: black;
     background-color: brown;
+    
 
 
 
 }
 
 .nav-logo{
+    max-width: 1400px;
     margin-left: 10em;
     display: flex;
     align-items: center;
     height: 100%;
     font-size: $nav-text;
+
+    @media screen and( max-width: 1800px) {
+        margin-left: 5em;
+    }
+
+    @media screen and( max-width: 1300px) {
+        margin-left: 2em;
+    }
+
+    @media screen and( max-width: 800) {
+        margin-left: 1em;
+    }
+         
+    
 }

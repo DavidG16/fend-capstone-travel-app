@@ -1,12 +1,15 @@
 import "./styles/styles.scss";
-//import planelogo from "./media/planelogo.png"
 import { addHandleSubmit } from "./js/HandleSubmit";
 import { getCityData } from "./js/getCityData";
+import { getWeatherData } from "./js/getWeatherData";
+import { handleDates} from "./js/handleDates"
 
 document.getElementById("add-trip").addEventListener('click', addHandleSubmit)
 
 export {
     addHandleSubmit,
-    getCityData
+    getCityData,
+    getWeatherData,
+    handleDates
 
 }

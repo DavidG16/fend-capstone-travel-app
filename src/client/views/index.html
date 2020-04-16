@@ -24,35 +24,27 @@
                     <div class="hero-text">
                         <h1>Trip Planner</h1>
                     </div>
-                    <div class="add-trip-form">
-                        <form>
-                            <label for="where"> where</label>
-                            <input type="text" id="where"> 
-                            <label for="when"> When</label>
-                            <input type="date" id="when">
-                            <button class="add-trip-class" id="add-trip"> Add Trip</button>
-                        </form>
+                    <div >
+                       <div class="user-input" id="user-input">
+                           <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="Where" name="where" id="where" required   autocomplete="off"/>
+                            <label for="where" class="form__label">Where</label>
+                          </div>
+
+                          <div class="form__group field">
+                            <input type="date" class="form__field" placeholder="When" name="when" id="when" required />
+                            <label for="where" class="form__label">When</label>
+                          </div>
+
+                            <button class="add-trip-btn" id="add-trip"> Add Trip</button>
+
+                       </div>
+               
+                    
                     </div>
                 </div>
             </header>
-            <section class="trip-card">
-                <div class="container">
-        
-                       <div class="trip-image">
-                            <!-- <img src="https://pixabay.com/get/55e0d340485aa814f1dc8460962932771d39d7e3524c704c7d2973d59244cd50_640.jpg"> -->
-                       </div>
-                       <div class="trip-info">
-                           <div class="trip-title">
-                               <p> Your trip to Miami</p>
-                           </div>
-                           <div class="trip-description">
-                               <p> Departing: November 04 2020 </p>
-                               <p> Weather: Sunny </p>
-
-                           </div>
-                       </div>
-                </div>
-            </section>
+            <section class="trip-card" id="trip-card"></section>
         </div>
     </body>
 </html>

@@ -25,7 +25,7 @@ import { handleDates } from "./handleDates"
             data.endDate = dates.endDate 
             data.departure = dates.departure 
           });
-          console.log(data)
+        //   console.log(data)
           return data;
 
     }

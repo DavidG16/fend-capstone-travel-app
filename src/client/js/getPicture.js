@@ -30,7 +30,7 @@ import axios from 'axios';
             }
 
           });
-          console.log(data)
+        //   console.log(data)
           return data;
     }
     catch(error) {

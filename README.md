@@ -24,3 +24,4 @@ npm run start-prod
 ```
 
 6. View the URL **http://localhost:3000/** in browser.
+7. Due to API limitations, only run todays date as user input. 

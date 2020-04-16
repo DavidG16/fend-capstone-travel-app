@@ -8,8 +8,7 @@ This project requires you to create an asynchronous web app that uses Web API an
 1. **Pre-requisite** : 
 Install [node.js](https://nodejs.org/)
 
-2. unzip the projects folder.
-
+2. Clone project 
 3. install the dependencies
 ```
 npm install

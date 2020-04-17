@@ -40,6 +40,8 @@ import axios from 'axios';
                 data.countDown = other_data.countDown
                 data.endDate = other_data.endDate 
                 data.departure = other_data.departure 
+                data.departure = other_data.departure 
+                data.countryCode = other_data.countryCode
             }
 
           });

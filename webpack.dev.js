@@ -1,36 +1,22 @@
 const path = require('path')
-const webpack = require('webpack')
+const common = require("./webpack.common");
+const merge = require("webpack-merge");
 const HtmlWebPackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const workboxPlugin = require('workbox-webpack-plugin')
-const Dotenv = require('dotenv-webpack')
 
-
-
-module.exports = {
-    entry: './src/client/index.js',
+module.exports = merge(common, {
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
     output: {
-        libraryTarget: 'var',
-        library: 'Client'
+        filename: "[name].bundle.js",
+        path: path.resolve(__dirname, "dist")
     },
     module: {
         rules: [
             {
-                test: '/\.js$/',
-                exclude: /node_modules/,
-                loader: 'babel-loader'
-            },
-            {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
-            },
-            {
-              test: /\.(png|svg|jpg|gif)$/,
-              use: ['file-loader'],
-            },
+            }
         ]
     },
 
@@ -38,20 +24,6 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: './src/client/views/index.html',
             filename: './index.html'
-        }),
-        new CleanWebpackPlugin({
-            dry: true,
-            verbose: true,
-            cleanStaleWebpackAssets: true,
-            protectWebpackAssets: false
-        }),
-         new workboxPlugin.GenerateSW({
-             clientsClaim: true,
-             skipWaiting: true
-         }),
-         new Dotenv({
-            path: path.resolve(__dirname, './.env'),
-            safe: true
-         })
+        })
     ]
-}
+})

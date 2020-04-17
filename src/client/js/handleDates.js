@@ -14,13 +14,6 @@ function handleDates () {
 
     return dates
 
-
-   
-
-    
-
-
-
 }
 
 export {
